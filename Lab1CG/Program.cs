@@ -17,8 +17,8 @@ namespace Lab1CG
                 //Lab2.getData();
                 //Lab2.getDataInt();
 
-                //Lab3.getData();
-                Lab4.getData();
+                Lab3.getData();
+               // Lab4.getData();
 
 
             }

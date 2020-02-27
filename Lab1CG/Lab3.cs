@@ -108,7 +108,8 @@ namespace Lab1CG
             {
                 if (i != SortedPoint.Count - 1)
                 {
-                    
+                    if (SortedPoint[i].Angle == SortedPoint[i + 1].Angle)
+                    {
                         if (SortedPoint[i].Point.y > SortedPoint[i + 1].Point.y)
                         {
                             SortPoint temp = new SortPoint();
@@ -116,6 +117,7 @@ namespace Lab1CG
                             SortedPoint[i] = SortedPoint[i + 1];
                             SortedPoint[i + 1] = temp;
                         }
+                    }
 
                     
                 }
@@ -126,12 +128,12 @@ namespace Lab1CG
             }
 
             Polygon polygon = new Polygon();
-           
-            //foreach (var item in SortedPoint)
-            //{
-            //    Console.WriteLine("({0},{1})\t", item.Point.x, item.Point.y);
-            //    polygon.Vertex.AddLast(item.Point);
-            //}
+
+            foreach (var item in SortedPoint)
+            {
+                Console.WriteLine("({0},{1})\t", item.Point.x, item.Point.y);
+                polygon.Vertex.AddLast(item.Point);
+            }
             return polygon;
 
         }
